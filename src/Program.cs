@@ -12,7 +12,7 @@ namespace MemCacheCounter
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddMemoryCache();
+            builder.Services.AddMemoryCache(o => o.TrackStatistics = true);
 
             var app = builder.Build();
 
